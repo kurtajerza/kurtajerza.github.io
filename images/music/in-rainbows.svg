@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="14"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.12  0 0 0 0 0.12  0 0 0 .55 -.12"/>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="#6a1b24"/>
+  <g filter="url(#rough)">
+    <circle cx="400" cy="400" r="392" fill="#6a1b24"/>
+    <circle cx="400" cy="400" r="372" fill="#efe4d2"/>
+    <circle cx="400" cy="400" r="348" fill="#6a1b24"/>
+    <circle cx="400" cy="400" r="330" fill="#efe4d2"/>
+    <circle cx="400" cy="400" r="300" fill="#7d2530"/>
+    <circle cx="400" cy="400" r="282" fill="#6a1b24"/>
+    <circle cx="400" cy="400" r="262" fill="#efe4d2"/>
+    <circle cx="400" cy="400" r="238" fill="#6a1b24"/>
+    <circle cx="400" cy="400" r="222" fill="#efe4d2"/>
+    <circle cx="400" cy="400" r="196" fill="#6a1b24"/>
+    <circle cx="400" cy="400" r="176" fill="#efe4d2"/>
+  </g>
+  <rect width="800" height="800" filter="url(#grain)" opacity=".55"/>
+  <!-- centre label -->
+  <circle cx="400" cy="400" r="150" fill="#f6f1e6"/>
+  <circle cx="400" cy="400" r="150" fill="none" stroke="#6a1b24" stroke-opacity=".45" stroke-width="3"/>
+  <circle cx="400" cy="400" r="96" fill="none" stroke="#6a1b24" stroke-opacity=".25" stroke-width="2"/>
+  <circle cx="400" cy="400" r="54" fill="#8a2a33" fill-opacity=".85"/>
+  <g stroke="#f6f1e6" stroke-opacity=".7" stroke-width="3" stroke-linecap="round">
+    <line x1="372" y1="388" x2="428" y2="388"/><line x1="368" y1="402" x2="432" y2="402"/><line x1="376" y1="416" x2="424" y2="416"/>
+  </g>
+</svg>
